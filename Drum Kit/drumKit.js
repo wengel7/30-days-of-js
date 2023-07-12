@@ -22,26 +22,3 @@ console.log(e.keyCode)
         }
     }
 });
-
-// window.addEventListener('click', ()=>{
-// console.log(" ,kljk");
-
-    // let audio = document.querySelector(`audio[data-key="${key.dataset.key}"]`);
-    // if(!audio) return; //no need to play any sound for this key press
-    // else{
-    //     audio.currentTime = 0;
-    //     audio.play();
-    //     key.classList.add("playing");
-
-    //     if(h != key.dataset.key){
-    //         audio = document.querySelector(`audio[data-key="${h}"]`);
-    //         key = document.querySelector(`div[data-key="${h}"]`);
-    //         h = key.dataset.key;
-    //         if(!key)return;
-    //         else{
-    //             // audio.stop();
-    //             key.classList.remove("playing");
-    //         }
-    //     }
-    // }
-// });
