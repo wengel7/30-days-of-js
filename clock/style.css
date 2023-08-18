@@ -1,0 +1,38 @@
+html {
+  background-color: rgb(42, 165, 73);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-surface{
+  background-color: pink;
+  border: 5px solid rgb(195, 187, 73);
+  border-radius: 10%;
+  width: 30rem;
+  height: 30rem;
+  box-sizing:inherit;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.hand {
+  width: 15%;
+  height: 8px;
+  background: rgb(152, 30, 30);
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform-origin: 0%;
+  transition: all 0.5;
+}
+.clock-hour{
+  width: 15%;
+}
+.clock-second{
+  width: 12%;
+}
+.clock-hour{
+  width: 10%;
+}
