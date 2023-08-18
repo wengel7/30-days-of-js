@@ -1,41 +1,38 @@
-body {
-  background-color: brown;
+html {
+  background-color: rgb(42, 165, 73);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.clock {
-  border: 5px solid wheat;
-  border-radius: 100%;
+.clock-surface{
+  background-color: pink;
+  border: 5px solid rgb(195, 187, 73);
+  border-radius: 10%;
   width: 30rem;
   height: 30rem;
+  box-sizing:inherit;
   margin: 50px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.clock-surface{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
 
 .hand {
-  /* border-top: 3px solid #131212; */
-  width: 50%;
-  height: 6px;
-  background: black;
+  width: 15%;
+  height: 8px;
+  background: rgb(152, 30, 30);
   position: absolute;
-  top: 50%;
-  /* transform: translate(-61px, 1500px); */
-  transform-origin: -100%;
+  top: 45%;
+  left: 50%;
+  transform-origin: 0%;
   transition: all 0.5;
-  /* transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); */
-  transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
- 
+}
+.clock-hour{
+  width: 15%;
+}
+.clock-second{
+  width: 12%;
+}
+.clock-hour{
+  width: 10%;
 }
