@@ -1,0 +1,41 @@
+:root{
+    --base: #ffc600;
+    --spacing: 0px;
+    --blur: 0px;
+}
+
+/*the style */
+body{
+    font-family: sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color:aliceblue;
+    background-color: rgb(16, 45, 61);
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    font-weight: 900;
+}
+span{
+    color: var(--base);
+}
+.ranges{
+    padding: 20px;
+}
+.choice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.change{
+    background-color: transparent;
+    filter: blur(var(--blur));
+}
+.image{
+    padding: var(--spacing);
+    background-color: var(--base);
+    width: 50%;
+    height: 50%;
+}
