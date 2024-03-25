@@ -10,7 +10,8 @@
     <div class="container">
         <h1>Password <span>Generator</span> </h1>
         <div class="containerInput">
-            <input type="text" class="input-box" placeholder="Generate a Random Password">
+            <input type="password" class="input-box seen" placeholder="Generate a Random Password">
+            <img src="Icons/closed-eyes.png" alt="" id="eyeIcon">
             <img src="/Randoms/Password/Icons/solar_copy-line-duotone.svg" alt="" class="copyBtn">
         </div>
         <button onclick="passwordGenerater()" class="btn">Generate password</button>
@@ -19,7 +20,8 @@
     <script>
         let passwordBox = document.querySelector('.input-box');
         let copyBtn = document.querySelector('.copyBtn');
-
+        let eyeIcon = document.getElementById('eyeIcon');
+        let isSeen = false;
         const length = 12;
         const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         const lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -39,17 +41,47 @@
                 password += allChars[Math.floor(Math.random() * symbol.length)];
             }
             passwordBox.value = password;
-            copyBtn.src = '/Randoms/Password/Icons/solar_copy-line-duotone.svg';
+            copyBtn.src = 'Icons/solar_copy-line-duotone.svg';
         }
+
+        // eyeIcon.addEventListener('click', ()=>{
+        //     if(passwordBox.type == 'password'){
+        //         passwordBox.type = 'text';
+        //     }else{
+        //         passwordBox.type = 'password';
+        //     }
+        // });
+        
+        eyeIcon.onclick = function (){
+            if(passwordBox.type == 'password'){
+                passwordBox.type = 'text';
+                eyeIcon.src = "Icons/show.png";
+                isSeen = true;
+            }else{
+                passwordBox.type = 'password';
+                eyeIcon.src = "Icons/closed-eyes.png";
+                isSeen = false;
+            }
+        };
         
         copyBtn.addEventListener('click', ()=>{
+            passwordBox.type = 'text';
             if(passwordBox.value != ''){
-                copyBtn.src = '/Randoms/Password/Icons/8672927_ic_fluent_checkbox_checked_filled_icon.svg';
+                copyBtn.src = 'Icons/8672927_ic_fluent_checkbox_checked_filled_icon.svg';
                 passwordBox.select();
+                setTimeout(()=>{
+            copyBtn.src = 'Icons/solar_copy-line-duotone.svg';
+
+                }, 6000);
+                // setTimeout(changeIcon, 8000);
+
                 document.execCommand('copy');
+                if(!isSeen){
+                    passwordBox.type = 'password';
+                }
             }
         });
-
+        
     </script>
 </body>
 </html>

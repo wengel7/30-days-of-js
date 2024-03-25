@@ -41,8 +41,7 @@ function calculateAge(){
         dm = 11;
         dy--;
     }
-  p.innerHTML = 'You are <span id="year">' + dy +'</span> year, <span id="months">' + dm + '</span> months and <span id="days">'+ dd + '</span> days Old'
-    
+        p.innerHTML = 'You are <span id="year">' + dy +'</span> year, <span id="months">' + dm + '</span> months and <span id="days">'+ dd + '</span> days Old'
 }
 function getdayInMonth(year, month){
     return new Date(year, month, 0).getDate();

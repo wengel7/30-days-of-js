@@ -24,11 +24,11 @@ body{
     gap: 12px;
 
 }
-.copyBtn{
-    width: 35px;
+img{
+    width: 43px;
     height: 50px;
     right: 70%;
-    transform: translate(-170%, 10%);
+    transform: translate(-300%, 10%);
 }
 
 h1 span{
@@ -43,6 +43,16 @@ input{
     border-radius: 5px;
     outline: none;
     padding: 8px;
+}
+
+.seen{
+    outline: 0;
+    /* font-size: 24px; */
+    color: #555;
+}
+
+.eyeIcon{
+    cursor: pointer;
 }
 
 .btn{
